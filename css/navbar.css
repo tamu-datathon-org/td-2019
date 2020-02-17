@@ -1,0 +1,248 @@
+:root {
+    --light-green: #04BEA8;
+    --light-blue: #4286F3;
+    --light-gray: #666666;
+    --really-light-green: #ddfef8;
+    --dark-green: #04BEA8;
+    --dark-purple: #1B1464;
+    --dark-red: #c0392b;
+    --light-red: #ff9478;
+}
+
+#mlh-trust-badge {
+    display: block;
+    max-width: 100px;
+    min-width: 60px;
+    position: fixed;
+    left: 100px;
+    top: 0;
+    width: 10%;
+    z-index: 998;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#header {
+    height: 70px;
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    padding: 15px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 997;
+}
+
+#header a {
+    color: #fff;
+}
+
+#header a:hover {
+    color: var(--light-green);
+}
+
+#header.header-scrolled {
+    background-color: #fff;
+    /* White MLH banner color: #f7f7f7 */
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+}
+
+#header.header-scrolled a {
+    color: var(--light-gray);
+}
+
+#header.header-scrolled a:hover {
+    color: var(--light-green);
+}
+
+#header.header-scrolled .navbar-volunteer {
+    border-right: var(--light-gray) 2px solid;
+}
+
+#header.header-scrolled .navbar-schedule {
+    border-right: var(--light-gray) 2px solid;
+}
+
+#header.light-bg {
+    background-color: var(--dark-purple);
+}
+
+#header .logo {
+    max-height: inherit;
+    vertical-align: middle;
+}
+
+#header .logo img {
+    max-height: 2.5vw;
+    min-height: 40px;
+    vertical-align: middle;
+    padding: auto;
+}
+
+#header-social-links {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* Desktop Navigation */
+
+.main-nav {
+    /* Drop Down */
+    /* Deep Drop Down */
+}
+
+.main-nav, .main-nav * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav>ul>li {
+    position: relative;
+    white-space: nowrap;
+    float: left;
+}
+
+.main-nav ul li a {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+    display: block;
+    position: relative;
+    color: var(--light-gray);
+    padding: 10px 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 550;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    color: var(--light-green);
+    text-decoration: none;
+    border-color: white;
+}
+
+.navbar-register {
+    color: #ec644b !important;
+}
+
+.navbar-volunteer {
+    border-right: white 2px solid;
+    color: #52b3d9 !important;
+}
+
+.navbar-workshops {
+    color: #c0392b !important;
+}
+
+.navbar-challenges {
+    color: #e58e26 !important;
+}
+
+.navbar-schedule {
+    border-right: white 2px solid;
+    color: #52b3d9 !important;
+}
+
+.navbar-schedule-mobile {
+    color: #52b3d9 !important;
+}
+
+.nav-link {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+    display: block;
+    position: relative;
+    color: var(--light-gray);
+    padding: 10px 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 550;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+  # Mobile Nav
+  --------------------------------------------------------------*/
+
+.mobile-nav {
+    width: 100vw;
+    text-align: center;
+    vertical-align: middle;
+    padding: auto;
+    float: right;
+    color: #fff;
+    display: none;
+}
+
+.navbar-collapse {
+    background-color: white;
+    width: 100vw;
+}
+
+#hamburger {
+    font-size: 30px;
+    background: none;
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+.header-scrolled #hamburger {
+    background: none;
+    color: var(--light-gray);
+    text-decoration: none;
+    outline: none;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+    padding: 0 0 30px 0;
+    font-size: 14px;
+    background: #ddfef8;
+  }
+  
+  #footer .copyright {
+    padding-top: 30px;
+    color: var(--light-gray);
+    font-size: 15px;
+  }
+  
+  .social-links {
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0px 5px 0px 5px;
+    color: var(--light-gray);
+  }
+  
+  .social-links:hover{
+    text-decoration: none;
+    color: var(--light-green);
+  }
+  
+  #code-of-conduct-link {
+    text-decoration: none;
+    color: var(--light-gray);
+  }
+  
+  #code-of-conduct-link:hover{
+    text-decoration: underline;
+  }

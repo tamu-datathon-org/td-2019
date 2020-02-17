@@ -1,0 +1,213 @@
+
+:root {
+  --light-green: #04BEA8;
+  --light-blue: #4286F3;
+  --light-gray: #666666;
+  --really-light-green: #ddfef8;
+  --dark-green: #04BEA8;
+  --dark-purple: #1B1464;
+  --dark-red: #c0392b;
+  --light-red: #ff9478;
+}
+
+@media print {
+  *, *:before, *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a, a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after, a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr, img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+
+html {
+  font-size: 15px;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  line-height: 1.85;
+}
+
+p, .air-p {
+  font-size: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+h1, .air-h1, h2, .air-h2, h3, .air-h3, h4, .air-h4 {
+  margin: 1.414rem 0 .5rem;
+  font-weight: inherit;
+  line-height: 1.42;
+}
+
+h1, .air-h1 {
+  margin-top: 0;
+  font-size: 3.998rem;
+}
+
+h2, .air-h2 {
+  font-size: 2.827rem;
+}
+
+h3, .air-h3 {
+  font-size: 1.999rem;
+}
+
+h4, .air-h4 {
+  font-size: 1.414rem;
+}
+
+h5, .air-h5 {
+  font-size: 1.121rem;
+  margin: 1.414rem 0 1.414rem;
+}
+
+h6, .air-h6 {
+  font-size: .88rem;
+}
+
+small, .air-small {
+  font-size: .707em;
+}
+
+/* https://github.com/mrmrs/fluidity */
+
+img, canvas, iframe, video, svg, select, textarea {
+  max-width: 100%;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300);
+main {
+  color: #444;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+  font-weight: 300;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin: 3vh auto 3vh auto;
+  max-width: 48rem;
+  text-align: center;
+}
+
+.md-img {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.sm-img {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  max-height: 10vh;
+}
+
+.round-img {
+  border-radius: 50%;
+  height: 200px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.centered-img {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.centered-banner {
+  display: block;
+  margin: auto;
+  margin-top: 5vh;
+  max-width: 60vw;
+  max-height: 250px;
+}
+
+.top-image {
+  margin-top: 15vh;
+}
+
+@media (max-width: 650px) {
+  .centered-banner {
+    max-width: 80vw;
+    max-height: 300px;
+  }
+}
+
+a {
+  color: var(--light-green);
+  transition: 0.5s;
+  text-decoration: underline;
+}
+
+a:hover, a:focus, a:active {
+  color: var(--light-gray);
+  outline: none;
+}
+
+pre {
+  background-color: #fafafa;
+  padding: 1rem;
+  text-align: left;
+}
+
+blockquote {
+  margin: 0;
+  border-left: 2px solid #7a7a7a;
+  font-style: italic;
+  padding: 2vw;
+  text-align: left;
+}
+
+.md-ul, .md-ol, .md-li {
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.half-divider {
+  width: 50%;
+  margin: auto;
+}
+
+p {
+  color: #777;
+  font-size: 1.2rem;
+}

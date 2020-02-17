@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138612638-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-138612638-1");
+    </script>
+
+    <meta charset="UTF-8" />
+    <title>TAMU Datathon - Learner Track Info</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="/image/png" href="./img/favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu|Segoe+UI|Roboto|Josefin+Sans"
+      rel="stylesheet"
+      async
+    />
+
+    <!-- Library CSS Files -->
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" async />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/markdown.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <!-- .main-nav -->
+    <header id="header" style="width:100vw;" class="header-scrolled">
+      <nav class="main-nav">
+        <div class="logo float-left ml-3">
+          <a href="/"
+            ><img src="/img/navbar_logo.png" class="my-auto py-auto"
+          /></a>
+        </div>
+      </nav>
+      <!-- .main-nav -->
+      <nav class="mobile-nav">
+        <div class="logo float-left ml-3">
+          <a href="/"
+            ><img src="/img/navbar_logo.png" class="my-auto py-auto"
+          /></a>
+        </div>
+
+        <button
+          class="navbar-toggler collapsed my-auto float-right mr-2"
+          type="button"
+          data-toggle="collapse"
+          data-target="#mobileNavList"
+          aria-controls="mobileNavList"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          id="hamburger"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="navbar-collapse collapse" id="mobileNavList" style="">
+          <ul class="navbar-nav main-nav-ui">
+            <li class="nav-item" style="padding-right: 0px;">
+              <span id="header-social-links">
+                <a
+                  class="fab fa-facebook social-links"
+                  href="https://www.facebook.com/Tamudatathon"
+                  target="_blank"
+                ></a>
+                <a
+                  class="fab fa-instagram social-links"
+                  href="https://www.instagram.com/tamu_datathon/"
+                  target="_blank"
+                ></a>
+                <a
+                  class="fas fa-at social-links"
+                  href="mailto:connect@tamudatathon.com"
+                ></a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Mobile Nav -->
+    </header>
+
+    <img src="/img/banner.png" class="centered-banner top-image" />
+
+    <main>
+      <h3>TAMU Datathon - Learner Track</h3>
+      <hr />
+      <h4>Lecture 1: Data Basics</h4>
+      <img
+        src="/img/xkcd/data_basics.png"
+        alt="Data Basics XKCD"
+        class="md-img"
+      />
+      <ul class="md-ul">
+        <li><b>The basic vocabulary of data:</b></li>
+        <ul class="md-ul">
+          <li>Tabled Data vs Unstructured Data</li>
+          <li>Features and Target Columns</li>
+          <li>Samples (data rows)</li>
+        </ul>
+        <li>The basics of reading/loading data using Pandas</li>
+        <li>Deal with missing values</li>
+        <li>
+          Plots: probability distribution and correlation (heatmaps) plots
+        </li>
+        <li><b>How to visualize data and understand it better:</b></li>
+        <ul class="md-ul">
+          <li>Exploratory analysis</li>
+          <li>Communicate effectively</li>
+          <li>How to make recommendations to stakeholders</li>
+        </ul>
+      </ul>
+
+      <hr class="half-divider" />
+
+      <h4>Lecture 2: Linear Regression</h4>
+      <img
+        src="/img/xkcd/linear_regression.png"
+        alt="Data Basics XKCD"
+        class="md-img"
+      />
+      <ul class="md-ul">
+        <li>What is a model? What makes a model linear?</li>
+        <li>Fit your own model by hand!</li>
+        <li>What does it mean to fit a model? (What is machine learning?)</li>
+        <li>
+          A visual introduction to optimization - "What is a Loss Function?"
+        </li>
+        <li>How to train a linear model using the Scikit Learn library</li>
+        <li>How to interpret a linear regression model</li>
+        <li>Understand the interpretability <> accuracy tradeoff</li>
+      </ul>
+
+      <hr class="half-divider" />
+
+      <h4>Lecture 3: Logistic Regression</h4>
+      <img
+        src="/img/xkcd/logistic_regression.png"
+        alt="Data Basics XKCD"
+        class="md-img"
+      />
+      <ul class="md-ul">
+        <li>What is classification?</li>
+        <li>What is logistic regression?</li>
+        <li>A visual introduction to non-convex optimization</li>
+        <li>Fit a logistic regression model yourself!</li>
+        <li>Fit a logistic regression model using the Scikit Learn library</li>
+        <li>
+          Fake News!! What is accuracy, true/false positives/negatives,
+          precision, recall?
+        </li>
+        <li>Generalize logistic to multiple classes</li>
+        <li>Visualize 2D decision boundaries</li>
+      </ul>
+
+      <hr class="half-divider" />
+
+      <h5>
+        15 hours of hacking time to work on a data science project to solve a
+        real-life challenge.
+      </h5>
+
+      <a href="/" class="btn btn-danger" style="text-decoration: none;">Back</a>
+    </main>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row copyright justify-content-between px-3">
+          <span>
+            &copy; TAMU Datathon 2019 &bull; &hearts; &bull;
+            <a
+              href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+              id="code-of-conduct-link"
+              target="_blank"
+              >Code of Conduct</a
+            >
+          </span>
+          <span id="footer-social-links">
+            <a
+              class="fab fa-facebook social-links"
+              href="https://www.facebook.com/Tamudatathon"
+              target="_blank"
+            ></a>
+            <a
+              class="fab fa-instagram social-links"
+              href="https://www.instagram.com/tamu_datathon/"
+              target="_blank"
+            ></a>
+            <a
+              class="fas fa-at social-links"
+              href="mailto:connect@tamudatathon.com"
+            ></a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS code -->
+    <script src="/js/anim.js"></script>
+    <script src="/js/constants.js"></script>
+    <script src="/js/app-deadline-handler.js"></script>
+
+    <a
+      id="mlh-trust-badge"
+      href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=red"
+      target="_blank"
+      ><img
+        src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-red.svg"
+        alt="Major League Hacking 2020 Hackathon Season"
+        style="width:100%"
+    /></a>
+  </body>
+</html>

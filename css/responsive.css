@@ -1,0 +1,355 @@
+:root {
+  --light-green: #04BEA8;
+  --dark-purple: #1B1464;
+  --light-blue: #4286F3;
+  --light-gray: #666666;
+}
+
+/*--------------------------------------------------------------
+# Responsive Media Queries
+--------------------------------------------------------------*/
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+  body {
+    font-size: 10%;
+  }
+
+  #intro .intro-info h5 {
+    font-size: 1rem;
+  }
+
+  #countdown-span {
+    font-size: 1rem;
+  }
+
+  .intro-btn {
+    font-size: 0.7rem;
+    padding: 0.6rem 1.1rem;
+    margin: 0.2rem 0.1rem 0.2rem 0.1rem;
+  }
+
+  .section-header {
+    width: 85%;
+  }
+
+  .section-header h3 {
+    font-size: 2.7rem;
+  }
+
+  .section-header p {
+    font-size: 1.1rem;
+  }
+
+  .section-header p {}
+
+  .transition-image-mobile {
+    display: block;
+  }
+
+  .transition-image {
+    display: none;
+  }
+
+  #faq { /* Needed for mobile transition image */
+    padding: 0vh 0vh 5vh 0vh;
+  }
+}
+
+@media only screen and (min-width : 480px) and (max-width : 760px) {
+  body {
+    font-size: 70%;
+  }
+
+  #intro .intro-info h5 {
+    font-size: 1.5rem;
+  }
+
+  #countdown-span {
+    font-size: 1.5rem;
+  }
+
+  .intro-btn {
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .section-header {
+    width: 85%;
+  }
+
+  .section-header h3 {
+    font-size: 2.7rem;
+  }
+
+  .section-header p {
+    font-size: 1.1rem;
+  }
+
+  .transition-image-mobile {
+    display: block;
+  }
+
+  .transition-image {
+    display: none;
+  }
+
+  #faq { /* Needed for mobile transition image */
+    padding: 0vh 0vh 5vh 0vh;
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+  .section-header h3 {
+    font-size: 2.7rem;
+  }
+
+  .section-header p {
+    font-size: 1.1rem;
+  }
+
+  #resources .resources-content-text-div p {
+    font-size: 0.9rem;
+  }
+
+  .team-title span h5 {
+    font-size: 15px;
+  }
+  
+  .team-title p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width : 992px) and (max-width : 1200px) {
+  body {
+    font-size: 100%;
+  }
+
+  .section-content p {
+    font-size: 1.15rem;
+  }
+}
+
+@media only screen and (min-width : 1200px) {
+  body {
+    font-size: 100%;
+  }
+
+  .section-content p {
+    font-size: 1.15rem;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}
+
+/* -------- OLD RESPONSIVE CSS -------- */
+
+
+@media (min-width: 991px) {}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 762px) {
+}
+
+@media (max-width: 1050px) {
+  .sponsors-three-row img {
+    max-height: 8vh;
+    max-width: 23vw;
+  }
+  
+  .sponsors-four-row img{
+    max-height: 8vh;
+    max-width: 17vw;
+  }
+
+  .modal-img {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 991px) {
+  #header {
+    height: 70px;
+    padding: 15px 0;
+  }
+
+  #intro .intro-info h6 {
+    color: #fff;
+    font-size: 2vw;
+  }
+
+  #landing-page-logo {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+
+  #faq #faq-list a {
+    font-size: 18px;
+  }
+
+  #faq #faq-list i {
+    top: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .modal-img {
+    width: 80vw;
+  }
+
+  #intro {
+    height: auto;
+  }
+
+  #intro .container {
+    height: auto !important;
+  }
+
+  #intro .intro-img {
+    width: 80%;
+  }
+
+  #intro .intro-info {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  #intro .intro-info h6 {
+    color: #fff;
+    font-size: 2.5vw;
+  }
+
+  #landing-page-logo {
+    width: 60vw;
+  }
+
+  .section-header p {
+    width: 100%;
+  }
+
+  #meet-the-team {
+    display: none;
+  }
+
+  .sponsors-two-row img {
+    max-height: 20vh;
+    max-width: 50vw;
+  }
+
+  .sponsors-three-row img {
+    max-height: 10vh;
+    max-width: 50vw;
+  }
+  
+  .sponsors-four-row img{
+    max-height: 10vh;
+    max-width: 40vw;
+    margin: auto;
+  }
+
+  #faq #faq-list a.faq-link {
+    font-size: 17px;
+  }
+
+  #faq #faq-list a.faq-link i {
+    font-size: 18px;
+    top: 20px;
+  }
+
+  #faq #faq-list p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 574px) {
+
+  .modal-img {
+    width: 85vw;
+  }
+
+  #sponsors .row img {
+    margin: 1.5vh 0vh 1.5vh 0vh;
+    max-width: 70vw;
+  }
+  
+  .sponsors-two-row img {
+    max-height: 20vh;
+  }
+
+  .sponsors-three-row img {
+    max-height: 15vh;
+  }
+
+  .sponsors-four-row img {
+    max-height: 15vh;
+  }
+
+  .sponsors-three-row-comet img {
+    max-height: 15vh;
+  }
+
+  #mlh-trust-badge {
+    left: 70px;
+  }
+  
+  #header .header-scrolled {
+    height: 60px;
+  }
+
+  #header .logo img{
+    max-height: 33px;
+    min-height: 0px;
+    vertical-align: middle;
+    padding: auto;
+  }
+
+  #hamburger {
+    font-size: 23px;
+  }
+
+  #intro {
+    background: url("../img/background_mobile.png") top center;
+    background-color: #cccccc;
+    background-size: cover;
+  }
+
+  #landing-page-div {
+    margin-bottom: 22vh;
+  }
+
+  #landing-page-logo {
+    width: 80vw;
+  }
+
+  #meet-the-team {
+    display: none;
+  }
+
+  #footer-social-links{
+    display: none;
+  }
+
+  #header-social-links {
+    display: block;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+  }
+}

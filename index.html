@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138612638-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-138612638-1");
+  </script>
+
+  <meta charset="utf-8" />
+  <title>TAMU Datathon</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta name="description" content="World’s first MLH data science hackathon" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="/image/png" href="./img/favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu|Segoe+UI|Roboto|Josefin+Sans" rel="stylesheet" async />
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" async />
+
+  <!-- Libraries CSS Files -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet" async />
+  <link href="lib/micromodal/micromodal.css" rel="stylesheet" async />
+
+  <!-- Main Stylesheet File -->
+  <link href="/css/style.css" rel="stylesheet" async />
+  <link href="/css/navbar.css" rel="stylesheet" async />
+  <link href="/css/responsive.css" rel="stylesheet" async />
+
+  <!-- Critical JS files -->
+</head>
+
+<body>
+  <!--==========================
+    Header
+  ============================-->
+  <!-- Schedule Modal -->
+  <div class="modal micromodal-slide" id="modal-schedule" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-schedule" -title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-schedule" -title">
+            <em>TAMU Datathon Schedule</em>
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+          </button>
+        </header>
+        <main class="modal__content" id="modal-schedule-content">
+          <hr />
+          <img class="modal-img" src="img/event-info/schedule_1.png" />
+          <hr />
+          <img class="modal-img" src="img/event-info/schedule_2.png" />
+          <hr />
+        </main>
+        <footer class="modal__footer">
+          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">
+            Close
+          </button>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <!-- Map Modal -->
+  <div class="modal micromodal-slide" id="modal-map" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-map" -title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-map" -title">
+            <em>Location / Map</em>
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+          </button>
+        </header>
+        <main class="modal__content" id="modal-map-content">
+          <h5>TAMU Rec Center Location</h5>
+          <hr />
+          <img class="modal-img" src="img/event-info/datathon_location_map.jpg" />
+          <hr />
+          <h5>Rec Center Internal Map</h5>
+          <hr />
+          <img class="modal-img" src="img/event-info/rec_center_floor_1.png" />
+          <hr />
+          <img class="modal-img" src="img/event-info/rec_center_floor_2.png" />
+        </main>
+        <footer class="modal__footer">
+          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">
+            Close
+          </button>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <header id="header" style="width:100vw;" class="header-scroll-animate">
+    <nav class="main-nav">
+      <div class="logo float-left ml-3">
+        <a href="/">
+          <img src="/img/navbar_logo.png" class="my-auto py-auto" />
+        </a>
+      </div>
+      <ul class="float-right">
+        <li>
+          <a class="navbar-workshops" href="/workshops" target="_blank">Workshops</a>
+        </li>
+        <li>
+          <a class="navbar-challenges" href="/challenges" target="_blank">Challenges & Winners</a>
+        </li>
+        <li>
+          <a class="navbar-schedule" href="javascript:void(0)" data-micromodal-trigger="modal-schedule">Schedule</a>
+        </li>
+        <li><a class="navbar-about" href="javascript:void(0)">About</a></li>
+        <li><a class="navbar-tracks" href="javascript:void(0)">Tracks</a></li>
+        <li>
+          <a class="navbar-resources" href="javascript:void(0)">Resources</a>
+        </li>
+        <li>
+          <a class="navbar-sponsors" href="javascript:void(0)">Sponsors</a>
+        </li>
+        <li><a class="navbar-faq" href="javascript:void(0)">FAQ</a></li>
+      </ul>
+    </nav>
+    <!-- .main-nav -->
+
+    <nav class="mobile-nav">
+      <div class="logo float-left ml-3">
+        <a href="/"><img src="/img/navbar_logo.png" class="my-auto py-auto" /></a>
+      </div>
+
+      <button class="navbar-toggler collapsed my-auto float-right mr-2" type="button" data-toggle="collapse"
+        data-target="#mobileNavList" aria-controls="mobileNavList" aria-expanded="false" aria-label="Toggle navigation"
+        id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="navbar-collapse collapse" id="mobileNavList" style="">
+        <ul class="navbar-nav main-nav-ui">
+          <li class="nav-item">
+            <a class="nav-link navbar-workshops" href="/workshops" target="_blank">Workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-challenges" href="/challenges" target="_blank">Challenges & Winners</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-schedule-mobile" href="javascript:void(0)" data-micromodal-trigger="modal-schedule">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-tracks">Tracks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-resources">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-sponsors">Sponsors</a>
+          </li>
+          <li class="nav-item" style="padding-right: 0px;">
+            <a class="nav-link navbar-faq">FAQ</a>
+          </li>
+          <li class="nav-item" style="padding-right: 0px;">
+            <span id="header-social-links">
+              <a class="fab fa-facebook social-links" href="https://www.facebook.com/Tamudatathon" target="_blank"></a>
+              <a class="fab fa-instagram social-links" href="https://www.instagram.com/tamu_datathon/"
+                target="_blank"></a>
+              <a class="fas fa-at social-links" href="mailto:connect@tamudatathon.com"></a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro" class="clearfix container-fluid">
+    <div class="row" style="width: 100vw; height: 100vh;">
+      <div class="col-12 intro-info order-md-first order-last my-auto text-center">
+        <div id="landing-page-div">
+          <img src="./img/horizontal_logo.png" id="landing-page-logo" class="pb-4" /><br />
+          <h5>This October, Texas A&M University</h5>
+          <a href="https://photos.app.goo.gl/d3Gg6NvfumjXaz839" target="_blank" class="intro-btn"
+            id="schedule-btn">2019 Picture Gallery</a>
+          <a href="https://www.facebook.com/Tamudatathon/videos/2774631099235207/" target="_blank" class="intro-btn"
+            id="challenges-btn">2019 Closing Ceremony</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #intro -->
+
+  <main id="main">
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about" class="section-bg section">
+      <!-- <img src="img/transitions/about_color_gradient.svg" id="about-color" class="transition-image"/> -->
+      <div class="container-fluid wow fadeInUp">
+        <header class="section-header">
+          <h3>ABOUT</h3>
+          <p>
+            World's First & Only MLH Data Science Hackathon
+          </p>
+        </header>
+        <div class="row justify-content-around">
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <div class="about-content section-content">
+              <p>
+                For the first time, TAMU Datathon is banding together data
+                enthusiasts from across multiple disciplines, skill levels,
+                and universities. TAMU Datathon is a 24 hour event where
+                companies, researchers, and hundreds of students immerse
+                themselves in data science.
+              </p>
+              <p>
+                We’re coming together to solve real world challenges, learn
+                about data science, hear from leaders in research, and compete
+                for company and university prizes.
+              </p>
+              <p>
+                This all happens in a fun, interactive, and competitive way by
+                providing our participants the option to take part in the
+                Learner Track or the Competitor Track. We believe the TAMU
+                Datathon will inspire students across all disciplines to
+                integrate quality data-driven practices into their field of
+                expertise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- #about -->
+
+    <!--==========================
+      Track Info Section
+    ============================-->
+    <section id="track-info" class="section">
+      <img src="img/transitions/stars_transition.svg" id="downward-stars" class="transition-image" />
+      <img src="img/transitions/stars_transition_mobile.png" id="downward-stars-mobile"
+        class="transition-image-mobile" />
+      <div class="container-fluid wow fadeInLeft">
+        <header class="section-header">
+          <h3>LEARNER vs COMPETITOR</h3>
+          <p>What does each track entail?</p>
+        </header>
+
+        <div class="row justify-content-around">
+          <!--
+          <div class="col-12">
+            <div id="featuresCarousel" class="carousel slide mx-auto" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#featuresCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#featuresCarousel" data-slide-to="1"></li>
+                <li data-target="#featuresCarousel" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="img/about/learner_classroom.jpg" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Challenges</h5>
+                    <p>Compete for prizes by working with a team on company datasets for 24 hours</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/about/mentor_teaching.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="img/about/walmart_booth.jpg" alt="Third slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#featuresCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#featuresCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          -->
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <div class="track-info-content section-content">
+              <h3>LEARNER</h3>
+              <p>
+                Not quite ready to compete? With just some basic knowledge of
+                Python, we will take you through the all the stages of a good
+                data science project, like data importing/preprocessing,
+                descriptive stats & visualization, machine learning/model
+                building, and report writing! You can even earn points during
+                your journey for some sweet swag!
+              </p>
+              <div class="info-link-group">
+                <a class="info-btn" href="/learner-info">More Info</a>
+              </div>
+              <h3>COMPETITOR</h3>
+              <p>
+                Try out your skills at a chance to win prizes from the
+                university <br />and/or companies and gain massive bragging
+                rights!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #track-info -->
+
+    <!--==========================
+      Resources Section
+    ============================-->
+    <section id="resources" class="section">
+      <img src="img/transitions/comets_transition.svg" id="downward-meteor" class="transition-image" />
+      <img src="img/transitions/comets_transition.png" id="downward-meteor-mobile" class="transition-image-mobile" />
+      <div class="container-fluid wow fadeInRight">
+        <header class="section-header">
+          <h3>RESOURCES</h3>
+          <p>How do I prepare?</p>
+        </header>
+        <div class="row justify-content-center">
+          <!-- First Resource Column -->
+          <div class="col-lg-4 col-md-5 col-sm-8 mr-lg-5 mr-md-5">
+            <div class="single-resource-div">
+              <div class="resources-content-icon-div">
+                <img src="img/icons/python.svg" class="resources-icons" />
+              </div>
+              <div class="resources-content-text-div">
+                <h3>Python</h3>
+                <p>
+                  Python is one of the most widely used languages for data
+                  science. Open-sourced libraries such as Pandas and
+                  Scikit-Learn, as well as industry backed projects like
+                  Tensorflow and PyTorch make it one the most important skills
+                  to master in the world of data. You can find a multitude of
+                  tutorials, classes and books on learning it, but we can
+                  direct you to some resources which will help you start you
+                  journey with Python.
+                </p>
+                <a class="btn resource-btn" href="https://www.codecademy.com/learn/python" target="_blank">Learn with
+                  Codecademy</a>
+                <a class="btn resource-btn" href="https://developers.google.com/edu/python/" target="_blank">Learn with
+                  Google</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Resource Column -->
+          <div class="col-lg-4 col-md-5 col-sm-8 mr-lg-5 mr-md-5">
+            <div class="single-resource-div">
+              <div class="resources-content-icon-div">
+                <img src="img/icons/matlab.svg" class="resources-icons" />
+              </div>
+              <div class="resources-content-text-div">
+                <h3>MATLAB</h3>
+                <p>
+                  MATLAB makes data science easy with tools to access and
+                  preprocess data, and build machine learning and predictive
+                  models. You can apply domain-specific feature engineering
+                  techniques for sensor, text, image, video, and other types
+                  of data, and use point-and-click apps for training and
+                  comparing models. With model importers and exporters and
+                  support for ONNX, you can collaborate with peers using
+                  frameworks like TensorFlow, PyTorch, and MxNet. Once you
+                  have built your model, operationalize it as part of
+                  production IT systems or cloud services without recoding.
+                </p>
+                <a class="btn resource-btn" href="https://www.mathworks.com/learn/tutorials/matlab-onramp.html"
+                  target="_blank">Free MATLAB Tutorial</a>
+                <a class="btn resource-btn" href=" https://www.mathworks.com/learn/tutorials/deep-learning-onramp.html"
+                  target="_blank">Free Deep Learning Tutorial</a>
+                <a class="btn resource-btn" href="https://www.mathworks.com/solutions/data-science.html"
+                  target="_blank">MATLAB for Data Science</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <!-- First Resource Column -->
+          <div class="col-lg-4 col-md-5 col-sm-8 mr-lg-5 mr-md-5">
+            <div class="single-resource-div">
+              <div class="resources-content-icon-div">
+                <img src="img/icons/classes.svg" class="resources-icons" />
+              </div>
+              <div class="resources-content-text-div">
+                <h3>Data Science Classes</h3>
+                <p>
+                  Growing interest in data science and a shift towards making
+                  education more accessible has put classes from the world's
+                  best schools at our fingertips. You can find classes from
+                  Stanford and MIT covering topics ranging from Information
+                  Theory to Machine Learning to Bayesian Statistics and more,
+                  all online. Here are some of the resources we believe will
+                  be useful for the Datathon.
+                </p>
+                <a class="btn resource-btn"
+                  href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/"
+                  target="_blank">MIT</a>
+                <a class="btn resource-btn" href="http://cs109.github.io/2015/" target="_blank">Harvard</a>
+                <a class="btn resource-btn" href="http://work.caltech.edu/telecourse#lectures"
+                  target="_blank">Caltech</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      Sponsors Section
+    ============================-->
+    <section id="sponsors" class="section">
+      <img src="img/transitions/planets_transition.png" id="downward-planets" class="transition-image" />
+      <img src="img/transitions/planets_transition_mobile.png" id="downward-planets-mobile"
+        class="transition-image-mobile" />
+      <div class="container-fluid">
+        <header class="section-header">
+          <h3>SPONSORS</h3>
+          <p>
+            The TAMU Datathon would not be possible without our generous
+            sponsors! <br />
+            Interested in sponsoring us? Please fill out
+            <a href="https://tamudatathon.typeform.com/to/DjlkSv" target="_blank">this form</a>
+            or email us at
+            <a href="mailto:connect@tamudatathon.com" class="email-link">connect@tamudatathon.com</a>!
+          </p>
+        </header>
+
+        <div class="sponsors-one-row row justify-content-center">
+          <div class="col-lg-5 col-md-6 text-center wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.7s">
+            <a href="http://www.facebook.com" target="_blank">
+              <img src="./img/sponsors/facebook.png" />
+            </a>
+          </div>
+        </div>
+
+        <div class="sponsors-two-row row justify-content-center">
+          <div class="col-lg-5 col-md-6 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.7s">
+            <a href="http://www.conocophillips.com" target="_blank">
+              <img src="./img/sponsors/conocophillips.png" />
+            </a>
+          </div>
+
+          <div class="col-lg-5 col-md-6 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.7s">
+            <a href="http://www.aramcoservices.com" target="_blank">
+              <img src="./img/sponsors/aramco.png" />
+            </a>
+          </div>
+        </div>
+
+        <div class="sponsors-three-row row justify-content-center">
+          <div class="col-lg-3 col-md-4 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.5s">
+            <a href="http://walmart.com" target="_blank">
+              <img src="./img/sponsors/walmart.png" class="sponsor-img" />
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-4 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.5s">
+            <a href="http://motiva.com" target="_blank">
+              <img src="./img/sponsors/motiva.png" class="sponsor-img" />
+            </a>
+          </div>
+        </div>
+
+        <div class="sponsors-three-row row justify-content-center">
+          <div class="col-lg-3 col-md-4 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.3s">
+            <a href="http://shell.com" target="_blank">
+              <img src="./img/sponsors/shell.svg" />
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-4 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.3s">
+            <a href="http://goldmansachs.com" target="_blank">
+              <img src="./img/sponsors/goldmansachs.png" />
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-4 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.5s">
+            <a href="http://bp.com" target="_blank">
+              <img src="./img/sponsors/bp.png" class="sponsor-img" />
+            </a>
+          </div>
+        </div>
+
+        <div class="sponsors-three-row row justify-content-center">
+          <div class="col-lg-3 col-md-4 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.5s">
+            <a href="http://usaa.com" target="_blank">
+              <img src="./img/sponsors/usaa.png" class="sponsor-img" />
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-4 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.5s">
+            <a href="http://mathworks.com" target="_blank">
+              <img src="./img/sponsors/mathworks.png" class="sponsor-img" />
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-4 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.5s">
+            <a href="http://cbre.com" target="_blank">
+              <img src="./img/sponsors/cbre.png" class="sponsor-img" />
+            </a>
+          </div>
+        </div>
+
+        <div class="sponsors-four-row row justify-content-center">
+          <div class="col-lg-2 col-md-2 text-center py-auto wow fadeIn my-4" data-wow-duration="1.5s"
+            data-wow-delay="0.3s">
+            <a href="http://mlh.io" target="_blank">
+              <img src="./img/sponsors/mlh.svg" class="sponsor-img-pad" id="mlh-logo" />
+            </a>
+          </div>
+
+          <div class="col-lg-2 col-md-2 text-center py-auto wow fadeIn my-4" data-wow-duration="1.5s"
+            data-wow-delay="0.5s">
+            <a href="http://do.co/studenthackathon" target="_blank">
+              <img src="./img/sponsors/digitalocean.png" class="sponsor-img" />
+            </a>
+          </div>
+
+          <div class="col-lg-2 col-md-2 text-center py-auto wow fadeIn my-4" data-wow-duration="1.5s"
+            data-wow-delay="0.5s">
+            <a href="http://github.com" target="_blank">
+              <img src="./img/sponsors/github.png" class="sponsor-img-pad" />
+            </a>
+          </div>
+
+          <div class="col-lg-2 col-md-2 text-center py-auto wow fadeIn my-4" data-wow-duration="1.5s"
+            data-wow-delay="0.5s">
+            <a href="http://hackp.ac/mlh-stickermule-hackathons" target="_blank">
+              <img src="./img/sponsors/sticker-mule.png" class="sponsor-img" />
+            </a>
+          </div>
+        </div>
+
+        <div class="sponsors-three-row row justify-content-center">
+          <div class="col-lg-3 col-md-4 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.4s">
+            <a href="https://engineering.tamu.edu/cse/index.html" target="_blank">
+              <img src="./img/sponsors/csce.png" class="sponsor-img" />
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-4 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="0.7s">
+            <a href="https://www.science.tamu.edu" target="_blank">
+              <img src="./img/sponsors/science.png" class="sponsor-img" />
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-4 text-center wow fadeIn my-4" data-wow-duration="1.5s" data-wow-delay="1.0s">
+            <a href="http://tti.tamu.edu" target="_blank">
+              <img src="./img/sponsors/tti_logo.png" class="sponsor-img" />
+            </a>
+          </div>
+        </div>
+
+        <div class="sponsors-four-row row justify-content-center">
+          <div class="col-lg-2 col-md-2 text-center wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.0s">
+            <a href="http://tamids.tamu.edu" target="_blank">
+              <img src="./img/sponsors/tamids_logo.png" class="sponsor-img" />
+            </a>
+          </div>
+
+          <div class="col-lg-2 col-md-2 text-center wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">
+            <a class="sponsor-img" href="http://stat.tamu.edu" target="_blank">
+              <img src="./img/sponsors/stat_logo.png" />
+            </a>
+          </div>
+
+          <div class="col-lg-2 col-md-2 text-center wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.3s">
+            <a class="sponsor-img" href="https://www.math.tamu.edu" target="_blank">
+              <img src="./img/sponsors/math_logo.png" />
+            </a>
+          </div>
+
+          <div class="col-lg-2 col-md-2 text-center wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.3s">
+            <a class="sponsor-img" href="https://www.tamuanalytics.com" target="_blank">
+              <img src="./img/sponsors/tdac.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      Meet the Team Section
+    ============================-->
+    <section id="meet-the-team" class="section">
+      <img src="img/transitions/white_stars_transition.svg" id="downward-white-stars" class="transition-image" />
+      <div class="container">
+        <header class="section-header">
+          <h3>Meet Our Team!</h3>
+        </header>
+
+        <div class="row justify-content-around wow fadeIn" data-wow-duration="2s">
+          <!--ROW 1-->
+          <div class="col-lg-3 col-md-3 col-sm-5 team-member">
+            <div class="team-member-imgdiv">
+              <div>
+                <img class="team-member-img" src="./img/team_images/josiah.jpg" alt="team member"
+                  class="img-responsive" />
+              </div>
+            </div>
+            <div class="team-title">
+              <span>
+                <h5>
+                  Josiah
+                  <a class="fab fa-github py-auto team-member-social" style="float: right;"
+                    href="https://github.com/josiahcoad" target="_blank"></a>
+                  <a class="fab fa-linkedin py-auto team-member-social" style="float: right;"
+                    href="https://www.linkedin.com/in/josiahcoad" target="_blank"></a>
+                </h5>
+              </span>
+              <p>Project Lead</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-5 team-member">
+            <div class="team-member">
+              <div>
+                <img class="team-member-img" src="./img/team_images/allyson.jpg" alt="team member"
+                  class="img-responsive" />
+              </div>
+            </div>
+            <div class="team-title">
+              <span>
+                <h5>
+                  Allyson
+                  <a class="fab fa-facebook py-auto team-member-social" style="float: right;"
+                    href="https://www.facebook.com/allyson.king.5" target="_blank"></a>
+                  <a class="fab fa-linkedin py-auto team-member-social" style="float: right;"
+                    href="https://www.linkedin.com/in/allysonmking/" target="_blank"></a>
+                </h5>
+              </span>
+              <p>Logistics</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-5 team-member">
+            <div class="team-member">
+              <div>
+                <img class="team-member-img" src="./img/team_images/megan.jpeg" alt="team member"
+                  class="img-responsive" />
+              </div>
+            </div>
+            <div class="team-title">
+              <span>
+                <h5>
+                  Megan
+                  <a class="fab fa-linkedin py-auto team-member-social" style="float: right;"
+                    href="https://www.linkedin.com/in/megan-meyer-852940129/" target="_blank"></a>
+                </h5>
+              </span>
+              <p>Logistics</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row justify-content-around wow fadeIn" data-wow-duration="2s">
+          <!--ROW 2-->
+          <div class="col-lg-3 col-md-3 col-sm-5 team-member">
+            <div class="team-member">
+              <div>
+                <img class="team-member-img" src="./img/team_images/yun.jpg" alt="team member" class="img-responsive" />
+              </div>
+            </div>
+            <div class="team-title">
+              <span>
+                <h5>
+                  Yun
+                  <a class="fab fa-facebook py-auto team-member-social" style="float: right;"
+                    href="https://www.facebook.com/profile.php?id=100005184465296" target="_blank"></a>
+                  <a class="fab fa-linkedin py-auto team-member-social" style="float: right;"
+                    href="https://www.linkedin.com/in/yun-phelps" target="_blank"></a>
+                </h5>
+              </span>
+              <p>Logistics & Design</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-5 team-member">
+            <div class="team-member">
+              <div>
+                <img class="team-member-img" src="./img/team_images/abdullah.jpg" alt="team member"
+                  class="img-responsive" />
+              </div>
+            </div>
+            <div class="team-title">
+              <span>
+                <h5>
+                  Abdullah
+                  <a class="fab fa-facebook py-auto team-member-social" style="float: right;"
+                    href="https://www.facebook.com/abdullah.ak.336" target="_blank"></a>
+                  <a class="fab fa-linkedin py-auto team-member-social" style="float: right;"
+                    href="https://www.linkedin.com/in/akader16/" target="_blank"></a>
+                </h5>
+              </span>
+              <p>Marketing</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-5 team-member">
+            <div class="team-member-imgdiv">
+              <div>
+                <img class="team-member-img" src="./img/team_images/andrew.jpg" alt="team member"
+                  class="img-responsive" />
+              </div>
+            </div>
+            <div class="team-title">
+              <span>
+                <h5>
+                  Andrew
+                  <a class="fab fa-facebook py-auto team-member-social" style="float: right;"
+                    href="https://www.facebook.com/casillasa92" target="_blank"></a>
+                  <a class="fab fa-linkedin py-auto team-member-social" style="float: right;"
+                    href="https://www.linkedin.com/in/andrew-d-casillas/" target="_blank"></a>
+                </h5>
+              </span>
+              <p>Marketing</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-around wow fadeIn" data-wow-duration="2s">
+          <!--ROW 3-->
+          <div class="col-lg-3 col-md-3 col-sm-5 team-member">
+            <div class="team-member">
+              <div>
+                <img class="team-member-img" src="./img/team_images/marina.jpg" alt="team member"
+                  class="img-responsive" />
+              </div>
+            </div>
+            <div class="team-title">
+              <span>
+                <h5>
+                  Marina
+                  <a class="fab fa-facebook py-auto team-member-social" style="float: right;"
+                    href="https://www.facebook.com/marina.romanyuk.9" target="_blank"></a>
+                  <a class="fab fa-linkedin py-auto team-member-social" style="float: right;"
+                    href="https://www.linkedin.com/in/mromanyuk/" target="_blank"></a>
+                </h5>
+              </span>
+              <p>Marketing</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-5 team-member">
+            <div class="team-member-imgdiv">
+              <div>
+                <img class="team-member-img" src="./img/team_images/sorhan.jpg" alt="team member"
+                  class="img-responsive" />
+              </div>
+            </div>
+            <div class="team-title">
+              <span>
+                <h5>
+                  Sorhan
+                  <a class="fab fa-facebook py-auto team-member-social" style="float: right;"
+                    href="https://www.facebook.com/Ssorhann" target="_blank"></a>
+                  <a class="fab fa-linkedin py-auto team-member-social" style="float: right;"
+                    href="https://www.linkedin.com/in/amir-s-karimloo/" target="_blank"></a>
+                </h5>
+              </span>
+              <p>Marketing</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-5 team-member">
+            <div class="team-member">
+              <div>
+                <img class="team-member-img" src="./img/team_images/chinmay.jpg" alt="team member"
+                  class="img-responsive" />
+              </div>
+            </div>
+            <div class="team-title">
+              <span>
+                <h5>
+                  Chinmay
+                  <a class="fab fa-github py-auto team-member-social" style="float: right;"
+                    href="https://github.com/phulsechinmay" target="_blank"></a>
+                  <a class="fab fa-linkedin py-auto team-member-social" style="float: right;"
+                    href="https://www.linkedin.com/in/chinmay-phulse-b33907135" target="_blank"></a>
+                </h5>
+              </span>
+              <p>Data & Development</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      Frequently Asked Questions Section
+    ============================-->
+    <section id="faq" class="section">
+      <img src="img/transitions/white_stars_transition_mobile.svg" id="downward-white-stars-mobile"
+        class="transition-image-mobile" />
+      <div class="container">
+        <header class="section-header">
+          <h3>FAQ</h3>
+          <p>
+            Something you want to know that's not on here?
+            <a href="mailto:connect@tamudatathon.com" class="email-link">Email us!</a>
+          </p>
+        </header>
+
+        <ul id="faq-list" class="">
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed faq-link">What exactly is the TAMU Datathon? <i
+                class="fa fa-minus"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                Imagine 300 students. 1 weekend. Many company sponsors with
+                datasets and prizes. As the first Datathon in Texas and one of
+                the first in the USA, we are leading the charge to bring data
+                science to a hackathon format at Texas A&M. It's designed for
+                both data science novices and wizards. If you'd like to learn
+                about how to start off, or use your skills to compete for some
+                industry sponsored and handpicked prizes, stay tuned for more!
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed faq-link">Who can attend? <i
+                class="fa fa-minus"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                Any undergraduate or graduate student who is at least 18.
+                Regardless of your experience, school, education, or
+                background, as long as you are excited about learning,
+                building, and having fun, we’re excited to have you!
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq4" class="collapsed faq-link">How much experience do I need? <i
+                class="fa fa-minus"></i></a>
+            <div id="faq4" class="collapse" data-parent="#faq-list">
+              <p>
+                We are excited that you are interested and will make sure you
+                get something out of the datathon, no matter your skill level.
+                That’s why we are having both learner and competitor tracks.
+                We’ll have lots of resources including workshops and a bunch
+                of mentors to help beginners get started.
+                <br /><br />
+                In addition, we’ll have some expert mentors in data science as
+                well to help more advanced attendees that are interested in
+                stretching their skills. Some basic understanding of Python
+                will be assumed for the learner track. You can get started
+                learning now with the resources mentioned above!
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq5" class="collapsed faq-link">How much does it cost? <i
+                class="fa fa-minus"></i></a>
+            <div id="faq5" class="collapse" data-parent="#faq-list">
+              <p>
+                We are working hard to make it free for you! We'll throw in
+                tons of swag, food, Wi-Fi, workspaces, and caffeine during
+                your stay.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq6" class="collapsed faq-link">How do teams work? <i
+                class="fa fa-minus"></i></a>
+            <div id="faq6" class="collapse" data-parent="#faq-list">
+              <p>
+                Teams can be made of up to four. You don’t need to have a team
+                before the event or have one at all, but model building with
+                friends is more fun! There will be plenty of time after the
+                opening ceremony to form teams if you don't have one by then.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq7" class="collapsed faq-link">How do you select who attends? <i
+                class="fa fa-minus"></i></a>
+            <div id="faq7" class="collapse" data-parent="#faq-list">
+              <p>
+                Our goal is that we find the right fit of people for our
+                event. We really want to know that you will have a good time
+                there and are excited to be there. In our applications we look
+                carefully for this culture fit, asking ourselves if this
+                person seems like they really want to be there. Furthermore,
+                for learners, we don’t ask that you have any data science
+                experience, but we would like to see some basic programming
+                experience. For competitors, we are looking for qualified and
+                driven data scientists.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq8" class="collapsed faq-link">Will there be workshops or talks? <i
+                class="fa fa-minus"></i></a>
+            <div id="faq8" class="collapse" data-parent="#faq-list">
+              <p>
+                Of course! We will have workshops running throughout the whole
+                event. We will release the complete schedule on this website
+                closer to the datathon.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq9" class="collapsed faq-link">Do you offer travel reimbursements? <i
+                class="fa fa-minus"></i></a>
+            <div id="faq9" class="collapse" data-parent="#faq-list">
+              <p>
+                We would love to provide travel reimbursements to all. Due to
+                this being our inaugural event however, we just can’t do
+                everything we’d like to do. Unfortunately, we will not be
+                providing travel reimbursements this year. However, we will
+                work hard to offer them next year!
+                <br /><br />
+                For people travelling from out of town, we will be releasing a
+                google sheet soon which will help you plan your trip and sync
+                rides for rideshares if needed.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq11" class="collapsed faq-link">When and where is TAMU Datathon? <i
+                class="fa fa-minus"></i></a>
+            <div id="faq11" class="collapse" data-parent="#faq-list">
+              <p>
+                TAMU Datathon will be held on the Texas A&M Campus in College
+                Station, Texas, October 19-20, 2019, in the University
+                Recreation Center.
+                <br /><br /><a href="https://goo.gl/maps/Smn2bwy4Rey6vUoD7" target="_blank">Address</a>: Texas A&M
+                Recreation Center, 797 Olsen Blvd, College
+                Station, TX 77845.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq12" class="collapsed faq-link">How long will the event last? <i
+                class="fa fa-minus"></i></a>
+            <div id="faq12" class="collapse" data-parent="#faq-list">
+              <p>
+                The event is planned for October 19th - 20th, beginning at
+                9:00 AM on 19th and ending at 5:00 PM on 20th.
+                <br /><br />
+                As the event will last overnight, it's a good idea to bring a
+                pillow and/or a sleeping bag, if you're planning to stay at
+                the venue. If you're coming from out of town, you can book
+                your own accomodations if you so wish.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq13" class="collapsed faq-link">Should I sign up for the Learner Track or
+              Competitor Track?
+              <i class="fa fa-minus"></i></a>
+            <div id="faq13" class="collapse" data-parent="#faq-list">
+              <p>
+                The Learner Track will use Python and Jupyter Notebooks to
+                take someone who has no or little experience in data science
+                through the entire data science process to build their own
+                analysis. We will cover essential Python packages for data
+                science like NumPy, Pandas, Scikit-learn and Matplotlib.
+                <br /><br />
+                Our interactive lecture series will take you through
+                <em>data reading and cleaning, data visualization, model
+                  building (machine learning), tuning/validation/evaluation,
+                  and results presenting</em>. You will have personal mentors who are experts in their
+                field help you every step of the way. You can find more
+                information <a href="/learner-info">here</a>. <br /><br />
+                Think you’re up for a challenge? Compete for prizes and
+                bragging rights in the Competitor Track! We’ll have company
+                workshops for you to attend as a competitor, but the
+                challenges would expect familiarity with data science.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- #faq -->
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row copyright justify-content-between px-3">
+        <span>
+          &copy; TAMU Datathon 2019 &bull; &hearts; &bull;
+          <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" id="code-of-conduct-link" target="_blank">Code of
+            Conduct</a>
+        </span>
+        <span id="footer-social-links">
+          <a class="fab fa-facebook social-links" href="https://www.facebook.com/Tamudatathon" target="_blank"></a>
+          <a class="fab fa-instagram social-links" href="https://www.instagram.com/tamu_datathon/" target="_blank"></a>
+          <a class="fas fa-at social-links" href="mailto:connect@tamudatathon.com"></a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/micromodal/micromodal.min.js"></script>
+  <script>
+    new WOW().init();
+    MicroModal.init();
+  </script>
+
+  <!-- CDN based libraries -->
+
+  <!-- Custom JS code -->
+  <script src="js/anim.js"></script>
+
+  <a id="mlh-trust-badge"
+    href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=red"
+    target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-red.svg"
+      alt="Major League Hacking 2020 Hackathon Season" style="width:100%;" /></a>
+</body>
+
+</html>
